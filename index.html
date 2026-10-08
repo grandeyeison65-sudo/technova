@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova | Taller Especializado en Equipos de Cómputo</title>
+  <meta name="description" content="TechNova - Taller especializado en mantenimiento, reparación e instalación de software. San Isidro, El Centro." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="top-bar">
+    <span><i class="fa-solid fa-circle-dot"></i> Taller especializado | <strong>San Isidro, El Centro</strong></span>
+    <span><i class="fa-solid fa-clock"></i> Lun-Vie 8-6 · Sáb 9-3 | WhatsApp: <strong>+503 7560-5466</strong></span>
+  </div>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <nav class="nav" id="header">
+    <div class="nav-container">
+      <div class="brand" data-tab="inicio">
+        Tech<span>Nova</span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" data-tab="inicio"><i class="fa-solid fa-terminal"></i> Inicio</a></li>
+        <li><a data-tab="servicios"><i class="fa-solid fa-screwdriver-wrench"></i> Servicios</a></li>
+        <li><a data-tab="garantia"><i class="fa-solid fa-shield-halved"></i> Garantía</a></li>
+        <li><a data-tab="metricas"><i class="fa-solid fa-chart-line"></i> Reseñas</a></li>
+        <li><a data-tab="contacto"><i class="fa-solid fa-headset"></i> Contacto</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================================================
+       PESTAÑA 1: INICIO
+       ================================================== -->
+  <div id="inicio" class="tab-content active">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="section-tag">/ Taller Especializado</span>
+        <h1>Reparamos y optimizamos tu <span class="text-cyan">equipo de cómputo</span></h1>
+        <p>Somos un taller especializado en mantenimiento, reparación, instalación de software y recuperación de datos. Trae tu equipo y lo dejamos como nuevo.</p>
+
+        <div class="flex-buttons">
+          <a href="https://wa.me/50375605466?text=Quiero%20traer%20mi%20equipo%20al%20taller" target="_blank" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> Traer mi equipo
+          </a>
+          <a class="btn btn-outline" data-tab="servicios">
+            <i class="fa-solid fa-list-check"></i> Ver servicios
+          </a>
+        </div>
+
+        <div class="hero-info">
+          <div><i class="fa-solid fa-location-dot"></i> A la par de la Cruz Roja</div>
+          <div><i class="fa-solid fa-shield-halved"></i> Garantía 2 semanas</div>
+          <div><i class="fa-solid fa-file-signature"></i> Documento de responsabilidad</div>
+        </div>
+      </div>
+
+      <div class="carrusel" id="carrusel-hero">
+        <div class="carrusel__slides">
+          <div class="carrusel__slide active">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=900&q=80" alt="Taller de computadoras">
+            <div class="carrusel__caption">
+              <h3>Taller Especializado</h3>
+              <p>Equipos en manos expertas</p>
+            </div>
+          </div>
+          <div class="carrusel__slide">
+            <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=900&q=80" alt="Reparación">
+            <div class="carrusel__caption">
+              <h3>Reparación Profesional</h3>
+              <p>Diagnóstico honesto</p>
+            </div>
+          </div>
+          <div class="carrusel__slide">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80" alt="Instalación">
+            <div class="carrusel__caption">
+              <h3>Software y Sistemas</h3>
+              <p>Windows, Office y más</p>
+            </div>
+          </div>
+          <div class="carrusel__slide">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Recuperación">
+            <div class="carrusel__caption">
+              <h3>Recuperación de Datos</h3>
+              <p>Recuperamos lo que creías perdido</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carrusel__btn carrusel__btn--prev" id="prev-hero" aria-label="Anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carrusel__btn carrusel__btn--next" id="next-hero" aria-label="Siguiente">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="carrusel__dots" id="dots-hero">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+          <span class="dot" data-slide="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number"><span class="contador" data-target="98">0</span>%</div>
+        <div class="stat-label">Tasa de Resolución</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">+<span class="contador" data-target="150">0</span></div>
+        <div class="stat-label">Equipos Reparados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="contador" data-target="14">0</span>d</div>
+        <div class="stat-label">Garantía Incluida</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number"><span class="contador" data-target="100">0</span>%</div>
+        <div class="stat-label">Documento Firmado</div>
+      </div>
+    </section>
+
+    <!-- VENTAJAS -->
+    <section class="section-block">
+      <div class="section-header">
+        <span>/ Por qué elegirnos</span>
+        <h2>Un taller de confianza</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>Diagnóstico Profundo</h3>
+          <p>Analizamos el equipo a nivel de componentes. Identificamos la causa raíz del problema.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-file-signature"></i></div>
+          <h3>Documento Firmado</h3>
+          <p>Al dejar tu equipo, firmamos un acuerdo de responsabilidad con el diagnóstico y trabajo a realizar.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Garantía de 2 Semanas</h3>
+          <p>Todos nuestros trabajos tienen 14 días de garantía sobre la mano de obra.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Servicio Rápido</h3>
+          <p>La mayoría de reparaciones se entregan en 2 a 3 días hábiles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+    <section class="section-block">
+      <div class="section-header">
+        <span>/ Lo que dominamos</span>
+        <h2>Servicios técnicos</h2>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-item"><i class="fa-brands fa-windows"></i><span>Windows</span></div>
+        <div class="tech-item"><i class="fa-brands fa-linux"></i><span>Linux</span></div>
+        <div class="tech-item"><i class="fa-solid fa-file-word"></i><span>Office</span></div>
+        <div class="tech-item"><i class="fa-solid fa-hard-drive"></i><span>SSD / HDD</span></div>
+        <div class="tech-item"><i class="fa-solid fa-database"></i><span>Datos</span></div>
+        <div class="tech-item"><i class="fa-solid fa-laptop-medical"></i><span>Laptops</span></div>
+        <div class="tech-item"><i class="fa-solid fa-desktop"></i><span>PCs</span></div>
+        <div class="tech-item"><i class="fa-solid fa-shield-virus"></i><span>Antivirus</span></div>
+        <div class="tech-item"><i class="fa-solid fa-bug"></i><span>Malware</span></div>
+        <div class="tech-item"><i class="fa-solid fa-download"></i><span>Drivers</span></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-band">
+      <div class="cta-band__content">
+        <i class="fa-solid fa-screwdriver-wrench cta-band__icon"></i>
+        <div>
+          <h3>¿Tu equipo no enciende o está lento?</h3>
+          <p>Tráelo al taller. Diagnóstico honesto y sin compromiso.</p>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20traer%20mi%20equipo" target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Contactar
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================================================
+       PESTAÑA 2: SERVICIOS
+       ================================================== -->
+  <div id="servicios" class="tab-content">
+
+    <div class="section-header section-header--big">
+      <span>/ Catálogo del taller</span>
+      <h2>Servicios Especializados</h2>
+      <p>Todo lo que hacemos por tu equipo. Trae tu computadora y la dejamos como nueva.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-broom"></i></div>
+        <h3>Mantenimiento Preventivo</h3>
+        <p>Limpieza profunda interna y externa para alargar la vida de tu equipo.</p>
+        <ul class="service-list">
+          <li>Limpieza de polvo interna</li>
+          <li>Cambio de pasta térmica</li>
+          <li>Revisión de ventiladores</li>
+          <li>Optimización de software</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$20.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20mantenimiento%20preventivo" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-brands fa-windows"></i></div>
+        <h3>Instalación de Windows</h3>
+        <p>Instalación limpia de Windows 10 o 11 con drivers y programas esenciales.</p>
+        <ul class="service-list">
+          <li>Windows 10 / 11</li>
+          <li>Drivers actualizados</li>
+          <li>Programas básicos</li>
+          <li>Configuración personalizada</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$15.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20instalar%20Windows" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-file-word"></i></div>
+        <h3>Activación de Office</h3>
+        <p>Instalación y activación de Microsoft Office (Word, Excel, PowerPoint).</p>
+        <ul class="service-list">
+          <li>Office 2019 / 2021</li>
+          <li>Word, Excel, PowerPoint</li>
+          <li>Activación permanente</li>
+          <li>Configuración de cuenta</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$10.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20activar%20Office" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+        <h3>Recuperación de Datos</h3>
+        <p>Recuperamos archivos borrados, formateados o de discos dañados.</p>
+        <ul class="service-list">
+          <li>Archivos borrados</li>
+          <li>Fotos y documentos</li>
+          <li>Discos formateados</li>
+          <li>Diagnóstico gratis</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$25.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20recuperar%20datos" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-hard-drive"></i></div>
+        <h3>Cambio a SSD</h3>
+        <p>Migración completa de tu disco duro a un SSD para que tu PC vuele.</p>
+        <ul class="service-list">
+          <li>Migración sin perder datos</li>
+          <li>SSD de alta velocidad</li>
+          <li>Clonado de sistema</li>
+          <li>Arranque en 10 segundos</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$35.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20cambiar%20a%20SSD" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-shield-virus"></i></div>
+        <h3>Eliminación de Virus</h3>
+        <p>Limpieza de malware, ransomware y programas maliciosos.</p>
+        <ul class="service-list">
+          <li>Análisis completo</li>
+          <li>Eliminación de malware</li>
+          <li>Instalación de antivirus</li>
+          <li>Configuración de seguridad</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$15.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20eliminar%20virus" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-laptop-medical"></i></div>
+        <h3>Reparación de Hardware</h3>
+        <p>Cambio de pantalla, teclado, bisagras, batería y otros componentes.</p>
+        <ul class="service-list">
+          <li>Cambio de pantalla</li>
+          <li>Cambio de teclado</li>
+          <li>Reemplazo de batería</li>
+          <li>Reparación de bisagras</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Cotización</span>
+          <span class="service-price__value">Personalizada</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Necesito%20reparación%20de%20hardware" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Consultar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-download"></i></div>
+        <h3>Instalación de Programas</h3>
+        <p>Instalación de programas profesionales, drivers y utilidades.</p>
+        <ul class="service-list">
+          <li>Adobe / diseño</li>
+          <li>Sistemas contables</li>
+          <li>Programas de ingeniería</li>
+          <li>Drivers actualizados</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$10.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20instalar%20programas" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-bug"></i></div>
+        <h3>Diagnóstico General</h3>
+        <p>Revisión completa del equipo con reporte técnico detallado.</p>
+        <ul class="service-list">
+          <li>Revisión de hardware</li>
+          <li>Estado del software</li>
+          <li>Reporte por escrito</li>
+          <li>Recomendaciones claras</li>
+        </ul>
+        <div class="service-price">
+          <span class="service-price__label">Desde</span>
+          <span class="service-price__value">$10.00</span>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20diagnóstico" target="_blank" class="btn btn-primary btn-full">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-band" style="margin-top: 60px;">
+      <div class="cta-band__content">
+        <i class="fa-solid fa-comments cta-band__icon"></i>
+        <div>
+          <h3>¿No sabes qué tiene tu equipo?</h3>
+          <p>Escríbenos por WhatsApp y te damos un diagnóstico inicial gratis.</p>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20un%20diagnóstico" target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Consultar
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CONTINÚA EN PARTE 2 DEL HTML -->
+     <!-- ==================================================
+       PESTAÑA 3: GARANTÍA Y RESPONSABILIDAD
+       ================================================== -->
+  <div id="garantia" class="tab-content">
+
+    <div class="section-header section-header--big">
+      <span>/ Compromiso TechNova</span>
+      <h2>Garantía y Responsabilidad</h2>
+      <p>Tu equipo está en manos de profesionales. Firmamos un documento contigo para tu tranquilidad.</p>
+    </div>
+
+    <!-- GARANTÍA -->
+    <div class="garantia-grid">
+      <div class="garantia-card garantia-card--principal">
+        <div class="garantia-card__icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3>Garantía de 2 semanas</h3>
+        <p class="garantia-card__desc">
+          Todos nuestros trabajos tienen <strong>14 días de garantía</strong> sobre la mano de obra. Si el mismo problema regresa dentro de ese plazo, lo solucionamos sin costo adicional.
+        </p>
+        <ul class="garantia-lista">
+          <li><i class="fa-solid fa-check"></i> Cubre mano de obra del técnico</li>
+          <li><i class="fa-solid fa-check"></i> Cubre el mismo problema reportado</li>
+          <li><i class="fa-solid fa-check"></i> Revisión y reparación gratuita</li>
+          <li><i class="fa-solid fa-check"></i> Sin costos ocultos</li>
+        </ul>
+      </div>
+
+      <div class="garantia-card">
+        <div class="garantia-card__icon">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <h3>Lo que NO cubre</h3>
+        <p class="garantia-card__desc">Para evitar malentendidos, esto es lo que la garantía NO incluye:</p>
+        <ul class="garantia-lista garantia-lista--no">
+          <li><i class="fa-solid fa-xmark"></i> Daños por golpes o caídas</li>
+          <li><i class="fa-solid fa-xmark"></i> Daños por líquidos derramados</li>
+          <li><i class="fa-solid fa-xmark"></i> Problemas nuevos no reportados</li>
+          <li><i class="fa-solid fa-xmark"></i> Daños por mal uso del cliente</li>
+          <li><i class="fa-solid fa-xmark"></i> Fallas eléctricas externas</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- DOCUMENTO DE RESPONSABILIDAD -->
+    <div class="section-header" style="margin-top: 80px;">
+      <span>/ Documento oficial</span>
+      <h2>Documento de Responsabilidad</h2>
+      <p>Al dejar tu equipo en el taller, firmamos este documento. Tú te quedas con una copia.</p>
+    </div>
+
+    <div class="documento-wrapper">
+      <div class="documento">
+        <div class="documento__header">
+          <div class="documento__logo">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Tech<strong>Nova</strong></span>
+          </div>
+          <div class="documento__titulo">
+            <h3>DOCUMENTO DE RESPONSABILIDAD</h3>
+            <p>Taller Especializado en Equipos de Cómputo</p>
+          </div>
+        </div>
+
+        <div class="documento__cuerpo">
+          <div class="documento__seccion">
+            <h4><i class="fa-solid fa-user"></i> Datos del cliente</h4>
+            <div class="documento__campo"><span>Nombre:</span> _______________________</div>
+            <div class="documento__campo"><span>Teléfono:</span> _______________________</div>
+            <div class="documento__campo"><span>Correo:</span> _________________________</div>
+          </div>
+
+          <div class="documento__seccion">
+            <h4><i class="fa-solid fa-laptop"></i> Datos del equipo</h4>
+            <div class="documento__campo"><span>Tipo:</span> [ ] Laptop  [ ] PC de escritorio  [ ] Otro: ____</div>
+            <div class="documento__campo"><span>Marca:</span> _______________________</div>
+            <div class="documento__campo"><span>Modelo:</span> ______________________</div>
+            <div class="documento__campo"><span>Contraseña (opcional):</span> ____________</div>
+          </div>
+
+          <div class="documento__seccion">
+            <h4><i class="fa-solid fa-stethoscope"></i> Diagnóstico inicial</h4>
+            <p class="documento__parrafo">Problema reportado por el cliente:</p>
+            <div class="documento__lineas">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="documento__seccion">
+            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Trabajo a realizar</h4>
+            <div class="documento__checkboxes">
+              <div><i class="fa-regular fa-square"></i> Mantenimiento preventivo</div>
+              <div><i class="fa-regular fa-square"></i> Cambio de pasta térmica</div>
+              <div><i class="fa-regular fa-square"></i> Migración a SSD</div>
+              <div><i class="fa-regular fa-square"></i> Instalación de Windows</div>
+              <div><i class="fa-regular fa-square"></i> Activación de Office</div>
+              <div><i class="fa-regular fa-square"></i> Recuperación de datos</div>
+              <div><i class="fa-regular fa-square"></i> Eliminación de virus</div>
+              <div><i class="fa-regular fa-square"></i> Reparación de hardware</div>
+              <div><i class="fa-regular fa-square"></i> Otro: ____________________</div>
+            </div>
+          </div>
+
+          <div class="documento__seccion">
+            <h4><i class="fa-solid fa-file-contract"></i> Condiciones del servicio</h4>
+            <ol class="documento__condiciones">
+              <li>El cliente entrega el equipo en las condiciones descritas y con acceso completo (usuario y contraseña).</li>
+              <li>TechNova se compromete a realizar el trabajo en el plazo acordado y de forma profesional.</li>
+              <li>Se otorga <strong>garantía de 2 semanas (14 días)</strong> sobre la mano de obra del trabajo realizado.</li>
+              <li>TechNova <strong>NO se hace responsable</strong> por datos que no hayan sido respaldados previamente por el cliente.</li>
+              <li>El cliente se compromete a revisar el equipo al momento de la entrega y firmar de conformidad.</li>
+              <li>El equipo debe ser retirado en un plazo máximo de 30 días después de la notificación de entrega.</li>
+            </ol>
+          </div>
+
+          <div class="documento__firmas">
+            <div class="documento__firma">
+              <div class="documento__firma-linea"></div>
+              <p>Firma del cliente</p>
+              <span>Nombre y fecha</span>
+            </div>
+            <div class="documento__firma">
+              <div class="documento__firma-linea"></div>
+              <p>Firma de TechNova</p>
+              <span>Técnico responsable</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="documento__footer">
+          <p><i class="fa-solid fa-location-dot"></i> San Isidro, El Centro (a la par de la Cruz Roja)</p>
+          <p><i class="fa-solid fa-phone"></i> +503 7560-5466</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-band" style="margin-top: 60px;">
+      <div class="cta-band__content">
+        <i class="fa-solid fa-file-signature cta-band__icon"></i>
+        <div>
+          <h3>¿Listo para traer tu equipo?</h3>
+          <p>Escríbenos por WhatsApp y coordinamos la entrega en el taller.</p>
+        </div>
+        <a href="https://wa.me/50375605466?text=Quiero%20traer%20mi%20equipo%20al%20taller" target="_blank" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Agendar
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================================================
+       PESTAÑA 4: MÉTRICAS Y RESEÑAS
+       ================================================== -->
+  <div id="metricas" class="tab-content">
+
+    <div class="section-header section-header--big">
+      <span>/ Control de Calidad</span>
+      <h2>Evaluación de Clientes</h2>
+      <p>Datos reales de satisfacción de clientes en San Isidro y zonas cercanas.</p>
+    </div>
+
+    <div class="resumen">
+      <div class="resumen__promedio">
+        <div class="resumen__numero" id="promedio-numero">0.0</div>
+        <div class="estrellas" id="promedio-estrellas">
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <p id="promedio-total">Basado en 0 reseñas</p>
+      </div>
+
+      <div class="resumen__barras" id="barras-estrellas"></div>
+    </div>
+
+    <form class="form-resena" id="form-resena">
+      <h3><i class="fa-solid fa-pen"></i> Deja tu reseña</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Tu nombre o empresa</label>
+          <input type="text" id="nombre" placeholder="Ej: Carlos Méndez" required maxlength="40">
+        </div>
+
+        <div class="form-group">
+          <label>Tu puntuación</label>
+          <div class="estrellas-input" id="estrellas-input">
+            <i class="fa-regular fa-star" data-valor="1"></i>
+            <i class="fa-regular fa-star" data-valor="2"></i>
+            <i class="fa-regular fa-star" data-valor="3"></i>
+            <i class="fa-regular fa-star" data-valor="4"></i>
+            <i class="fa-regular fa-star" data-valor="5"></i>
+          </div>
+          <input type="hidden" id="puntuacion" value="0">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="comentario">Tu comentario</label>
+        <textarea id="comentario" rows="4" placeholder="Cuéntanos tu experiencia con el taller..." required maxlength="300"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">
+        <i class="fa-solid fa-paper-plane"></i> Publicar reseña
+      </button>
+    </form>
+
+    <div class="resenas-lista" id="resenas-lista"></div>
+
+  </div>
+
+  <!-- ==================================================
+       PESTAÑA 5: CONTACTO
+       ================================================== -->
+  <div id="contacto" class="tab-content">
+
+    <div class="section-header section-header--big">
+      <span>/ Asistencia Técnica</span>
+      <h2>Centro de Operaciones</h2>
+      <p>Tráenos tu equipo al taller o escríbenos por WhatsApp para coordinar.</p>
+    </div>
+
+    <div class="contacto-grid">
+
+      <!-- INFO -->
+      <div class="contacto-info">
+        <div class="contacto-card-mini">
+          <i class="fa-brands fa-whatsapp"></i>
+          <div>
+            <span class="contacto-card-mini__label">Línea Directa</span>
+            <strong>+503 7560-5466</strong>
+          </div>
+        </div>
+
+        <div class="contacto-card-mini">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <span class="contacto-card-mini__label">Ubicación del taller</span>
+            <strong>San Isidro, El Centro</strong>
+            <span class="contacto-card-mini__detalle">A la par de la Cruz Roja</span>
+          </div>
+        </div>
+
+        <div class="contacto-card-mini contacto-card-mini--horario">
+          <i class="fa-solid fa-clock"></i>
+          <div>
+            <span class="contacto-card-mini__label">Horarios de atención</span>
+            <strong>Lunes a Viernes: 8:00 AM - 6:00 PM</strong>
+            <strong>Sábado: 9:00 AM - 3:00 PM</strong>
+            <strong>Domingo: Cerrado</strong>
+          </div>
+        </div>
+
+        <div class="contacto-card-mini">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <span class="contacto-card-mini__label">Garantía</span>
+            <strong>2 semanas (14 días)</strong>
+          </div>
+        </div>
+
+        <div class="contacto-card-mini">
+          <i class="fa-solid fa-file-signature"></i>
+          <div>
+            <span class="contacto-card-mini__label">Responsabilidad</span>
+            <strong>Documento firmado</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULARIO DE TICKET -->
+      <div class="ticket-panel">
+        <h3><i class="fa-solid fa-ticket"></i> Ticket de Servicio</h3>
+        <p class="ticket-panel__sub">Completa el formulario y coordinamos la recepción de tu equipo.</p>
+
+        <form id="form-ticket">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tkNombre">Nombre o Empresa</label>
+              <input type="text" id="tkNombre" placeholder="Ej: Juan Pérez" required maxlength="60">
+            </div>
+
+            <div class="form-group">
+              <label for="tkTelefono">Teléfono</label>
+              <input type="tel" id="tkTelefono" placeholder="Ej: 7000-0000" required maxlength="15">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tkEquipo">Tipo de equipo</label>
+              <select id="tkEquipo" required>
+                <option value="">Selecciona...</option>
+                <option value="Laptop">Laptop</option>
+                <option value="PC de escritorio">PC de escritorio</option>
+                <option value="All in One">All in One</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="tkMarca">Marca / Modelo</label>
+              <input type="text" id="tkMarca" placeholder="Ej: HP Pavilion" maxlength="40">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tkServicio">Servicio requerido</label>
+            <select id="tkServicio" required>
+              <option value="">Selecciona el servicio...</option>
+              <option value="Mantenimiento preventivo">Mantenimiento preventivo</option>
+              <option value="Instalación de Windows">Instalación de Windows</option>
+              <option value="Activación de Office">Activación de Office</option>
+              <option value="Recuperación de datos">Recuperación de datos</option>
+              <option value="Cambio a SSD">Cambio a SSD</option>
+              <option value="Eliminación de virus">Eliminación de virus</option>
+              <option value="Reparación de hardware">Reparación de hardware</option>
+              <option value="Instalación de programas">Instalación de programas</option>
+              <option value="Diagnóstico general">Diagnóstico general</option>
+              <option value="Otro">Otro (especificar en detalles)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tkUrgencia">Urgencia</label>
+            <select id="tkUrgencia" required>
+              <option value="">Selecciona...</option>
+              <option value="Baja">Baja - puede esperar días</option>
+              <option value="Media">Media - esta semana</option>
+              <option value="Alta">Alta - hoy o mañana</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="tkDetalle">Describe el problema</label>
+            <textarea id="tkDetalle" rows="4" placeholder="Cuéntanos qué le pasa a tu equipo, cuándo empezó, si muestra algún mensaje de error..." required maxlength="500"></textarea>
+          </div>
+
+          <div class="form-group form-checkbox">
+            <label class="checkbox-label">
+              <input type="checkbox" id="tkTerminos" required>
+              <span>Acepto los términos del <strong>Documento de Responsabilidad</strong> y las condiciones de la garantía de 2 semanas.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-brands fa-whatsapp"></i> Enviar ticket por WhatsApp
+          </button>
+
+          <p class="ticket-panel__nota">
+            <i class="fa-solid fa-lock"></i> Tus datos solo se usan para contactarte.
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section-block section-block--mt">
+      <div class="section-header">
+        <span>/ Preguntas Frecuentes</span>
+        <h2>Dudas comunes</h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Cuánto tarda una reparación típica?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>Un mantenimiento estándar tarda 24-48 horas. Instalación de Windows y Office puede estar el mismo día. Reparaciones complejas o recuperación de datos toman de 3 a 5 días hábiles.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Por qué firman un documento de responsabilidad?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>Para proteger tanto al cliente como al taller. El documento describe el estado del equipo al recibirlo, el trabajo que se va a realizar y las condiciones de entrega. Ambas partes firman y cada uno se queda con una copia.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Qué cubre la garantía de 2 semanas?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>Cubre la mano de obra del técnico sobre el trabajo realizado. Si el mismo problema regresa dentro de los 14 días, lo revisamos y reparamos sin costo. NO cubre daños por golpes, líquidos o mal uso.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Los datos que tengo en mi equipo están seguros?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>En el documento de responsabilidad queda claro que recomendamos respaldar los datos antes de traer el equipo. Si se requiere formateo o reinstalación, los datos podrían perderse. Si quieres, podemos hacer el respaldo nosotros por un costo adicional.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Atienden a domicilio?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>Somos un taller especializado, por lo que el servicio es presencial en nuestras instalaciones en San Isidro, El Centro (a la par de la Cruz Roja). Trae tu equipo, lo revisamos y te damos un diagnóstico el mismo día.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Qué métodos de pago aceptan?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>Efectivo, transferencia bancaria y pago móvil (Chivo, Tigo Money). El pago se realiza al retirar el equipo, después de confirmar que todo quedó funcionando correctamente.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q">
+            <span>¿Qué pasa si no retiro mi equipo a tiempo?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-item__a">
+            <p>El documento establece 30 días máximo para retirar el equipo después de la notificación de entrega. Pasado ese plazo, se cobrará un costo de almacenamiento diario.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom: 1.5rem;">Tech<span>Nova</span></div>
+        <p>Taller especializado en equipos de cómputo. Mantenimiento, reparación, instalación de software y recuperación de datos con garantía firmada.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/50375605466" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li>Mantenimiento preventivo</li>
+          <li>Instalación de Windows</li>
+          <li>Activación de Office</li>
+          <li>Recuperación de datos</li>
+          <li>Cambio a SSD</li>
+          <li>Eliminación de virus</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Información</h4>
+        <ul style="font-family: 'Roboto Mono', monospace;">
+          <li><i class="fa-solid fa-location-dot" style="color: var(--accent-cyan); margin-right: 8px;"></i>San Isidro, El Centro</li>
+          <li><i class="fa-solid fa-map-pin" style="color: var(--accent-cyan); margin-right: 8px;"></i>A la par de la Cruz Roja</li>
+          <li><i class="fa-solid fa-phone" style="color: var(--accent-cyan); margin-right: 8px;"></i>+503 7560-5466</li>
+          <li><i class="fa-solid fa-clock" style="color: var(--accent-cyan); margin-right: 8px;"></i>Lun-Vie 8-6 · Sáb 9-3</li>
+          <li><i class="fa-solid fa-shield-halved" style="color: var(--accent-cyan); margin-right: 8px;"></i>Garantía 2 semanas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 TechNova Taller Especializado - Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- ============ FLOTANTES ============ -->
+  <a href="https://wa.me/50375605466" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <button class="back-top" id="back-top" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
